@@ -1,0 +1,21 @@
+Marketing Team
+
+1. Build an app that displays products.
+2. There can only be three products displayed at a time.
+3. The three photos have to be side-by-side.
+4. The user has to click on the image they like the best.
+5. Can only click as many as 25 times and then you will be shown a percentage of the results from the  most commonly clicked and least commonly clicked.
+
+
+Developers
+
+1. Have 3 photos appear every time the page is clicked.
+2. Can only click as many as 25 times and then you will be shown a percentage of the results from the  most commonly clicked and least commonly clicked.
+3. Have to scale and size each photo to fit on the page.
+4. Add all custom layout with colors and more.
+
+The Participant
+
+1. Want to smoothly see the three images pop up and select the one they would like to buy.
+2. Want to see an app aesthetically pleasing with colors and good images.
+3. At the end, they want to see which one got selected the most with a percentage etc.
