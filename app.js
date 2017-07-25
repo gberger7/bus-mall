@@ -1,9 +1,9 @@
-'Use Strict';
+'use strict';
 
 
-function Pics(number) {
-  this.name = number;
-  this.source = 'images/' +this.name + '.jpg';
+function Pics(name) {
+  this.name = name;
+  this.source = 'bus-images/' + this.name + '.jpg';
   this.amountShown = 0;
   this.timesClicked = 0;
   Pics.all.push(this);
@@ -11,17 +11,19 @@ function Pics(number) {
 
 
 Pics.all = [];
-Pics.allNames = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine','ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+console.log(Pics.all, 'all pics');
+new Pics('bag');
+// Pics.allNames = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine','ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
 
 var previouslyShown = [];
-for(var i = 0; i < Pics.allNames.length; i++);
+for(var i = 0; i < Pics.all.length; i++);
 
-var Pics(Pics.allNames[i]);
+// var Pics(Pics.allNames[i]);
 
-Pictures.leftImg = document.getElementById('left');
-Pictures.centerImg = document.getElementById('center');
-Pictures.rightImg = document.getElementById('right');
-Pictures.container = document.getElementById('imageContainer');
+Pics.leftImg = document.getElementById('left');
+Pics.centerImg = document.getElementById('center');
+Pics.rightImg = document.getElementById('right');
+Pics.container = document.getElementById('imageContainer');
 
 function randomNum(){
   return Math.floor(Math .random() * Pics.all.length);
@@ -29,17 +31,17 @@ function randomNum(){
 
 function displayImages(){
 
-  console.log(previouslyShown, 'peviously shown images');
+  // console.log(previouslyShown, 'peviously shown images');
   var numbers = [];
-  numbers[0] = makeRandomNum();
-  numbers[1] = makeRandomNum();
-  whie(numbers[0] === numbers[1]) {
+  numbers[0] = randomNum();
+  numbers[1] = randomNum();
+  while(numbers[0] === numbers[1]) {
   }
-  numbers[1] = makeRandomNum();
-  numbers[2] = makeRandomNum
+  numbers[1] = randomNum();
+  numbers[2] = randomNum();
   while(numbers[2] === numbers[1] || numbers[2] ===
     numbers[0]) {
-      numbers[2] = makeRandomNum();
+      numbers[2] = randomNum();
     }
     leftImg.src = Pics.all[numbers[0]].source;
     centerImg.src = Pics.all[numbers[1]].source;
@@ -53,7 +55,6 @@ function displayImages(){
     console.log(numbers, 'currently showing');
     previouslyShown = numbers;
   }
-}
 
 function showList () {
   var ulEl = document.getElementById('list')
@@ -66,7 +67,7 @@ function showList () {
     Pics.all[i].name
     ulEl.appendChild(liEl);
   }
-}
+
 
 function handleClick(e){
   Pics.totalClicks += 1;
@@ -81,8 +82,8 @@ function handleClick(e){
     //removed the event listener.
     Pics.container.addEventListener('click', handleClick);
     //displayed a list of products and show/clicks.
-    return showList();
+    // return showList();
   }
-}
+
 
 displayImages();
