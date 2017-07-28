@@ -111,18 +111,20 @@ function handleClick(event) {
     Pics.all[numbers[2]].timesClicked += 1;
   }
 
-  if (Pics.totalClicks === 10) {
+  if (Pics.totalClicks === 5) {
     for (var i = 0; i < Pics.all.length; i++) {
       clicksPerProduct.push(Pics.all[i].timesClicked);
     }
 
+
     container.removeEventListener('click', handleClick);
     // showList(); //  print the data
     drawChart();
+    showList();
 
   } else {
-    for (var i = 0; i < numbers.length; i++) {
-      previouslyShown[i] = numbers[i];
+    for (var j = 0; j < numbers.length; j++) {
+      previouslyShown[j] = numbers[j];
     }
     getThreeUniqueRandomNumbers();
     drawImgs();
@@ -137,7 +139,6 @@ function handleClick(event) {
 // //   Pics.container.removeEventListener('click', handleClick)
 
 getThreeUniqueRandomNumbers();
-
 drawImgs();
 
 container.addEventListener('click', handleClick);
@@ -217,4 +218,5 @@ function drawChart() {
     }
   });
   chartDrawn = true;
+  productsChart();
 }
