@@ -6,3 +6,7 @@ img {
   display: inline-block;
   width: 200px;
 }
+
+title {
+text-decoration: blue;
+}
