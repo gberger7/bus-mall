@@ -1,5 +1,12 @@
 * {
+  background: #F6FBFF;
 
+}
+
+h1 {
+  font-family: 'Sanchez', serif;
+  text-decoration: underline dotted red;
+  font-size: 80px;
 }
 
 img {
